@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap'); 
+
+body {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 18px;
+} 
+
+h1,
+.title-xl {
+  font-size: 30px;
+  margin: 1em 0;
+  text-align: center;
+}
+
+h2,
+.title-l {
+  font-size: 28px;
+  margin: 0 0 1em 0;
+}
+
+h3,
+.title-m {
+  font-size: 26px;
+  margin: 0 0 1em 0;
+}
+
+h4,
+.title-s {
+  font-size: 22px;
+  margin: 0 0 1em 0;
+}
+
+h5,
+.title-xs {
+  font-size: 18px;
+  margin: 0 0 1em 0;
+}
+
+h6,
+.title-xxs {
+  font-size: 16px;
+  margin: 0 0 1em 0;
+}
+
+a {
+  color: $primary;
+
+  &:hover,
+  &:focus {
+    color: $primaryDark;
+  }
+}
+
+.btn {
+  background: $primary;
+  padding: 10px 30px;
+  color: $tint-25;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 20px;
+  transition: ease all 0.2s;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background: $primaryDark;
+    color: $tint-25;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+
+  h1,
+  .title-xl {
+    font-size: 40px;
+    margin: 1em 0;
+  }
+
+  h2,
+  .title-l {
+    font-size: 30px;
+  }
+}

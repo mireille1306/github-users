@@ -2,7 +2,7 @@ import express from 'express';
 const fetch = require("node-fetch");
 let cache = {};  
 
-export default (app, http) => {
+export default (app) => {
   app.use(express.json());
   
   app.get('/users', (req, res) => {
@@ -17,7 +17,7 @@ export default (app, http) => {
         cache[location] = json;
         res.send(json);
       })
-      .catch(err => {
+      .catch(() => {
         res.send(202);
       });
     }
@@ -35,12 +35,9 @@ export default (app, http) => {
         cache[username] = json;
         res.send(json);
       })
-      .catch(err => {
+      .catch(() => {
         res.send(202);
       });
     }
   });
 }
-
-// eslint-disable-next-line no-console
-console.log('test')
